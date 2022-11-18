@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://KryzhMax.github.io/proj-demo",
+  "homepage": "https://KryzhMax.github.io/hookah-project",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /proj-demo/"
+    "build": "parcel build src/*.html --public-url /hookah-project/"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "gsap": "^3.11.3",
     "modern-normalize": "^1.1.0"
   },
   "devDependencies": {

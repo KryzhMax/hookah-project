@@ -18,16 +18,16 @@ header {
     padding-top: 8px;
   }
 
+  @include mq(fab) {
+    width: 478px;
+  }
   @include mq(tab) {
     width: 768px;
-  }
-
-  @include mq(tab-only) {
     padding-left: 32px;
     padding-right: 32px;
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     width: 1200px;
   }
 }
@@ -55,7 +55,7 @@ header {
     background-color: transparent;
   }
 
-  @include mq(tab-only) {
+  @include mq(tab) {
     background-color: transparent;
     width: auto;
   }
@@ -67,15 +67,12 @@ header {
 }
 
 .logo {
-  @include mq(mob-only) {
-    max-height: 50px;
-  }
-
   display: flex;
-}
+  // opacity: 0.8;
 
-.logo__img {
-  max-height: 50px;
+  & img {
+    border-radius: 5px;
+  }
 }
 
 .main-nav {
@@ -89,7 +86,7 @@ header {
     margin-top: 32px;
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     max-height: 50px;
     margin-top: 37px;
     margin-bottom: 0;
@@ -101,7 +98,7 @@ header {
 }
 
 .site-nav--mobile {
-  @include mq(desc) {
+  @include mq(desk) {
     display: none;
   }
 
@@ -140,7 +137,7 @@ header {
   z-index: 4;
 
   cursor: pointer;
-  stroke: var(--title-main);
+  stroke: var(--background-secondary);
   transition: stroke var(--transition);
   // transition-property: stroke;
   // transition-duration: 250ms;
@@ -150,7 +147,7 @@ header {
     margin-right: 32px;
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     display: none;
   }
 }
@@ -160,13 +157,8 @@ header {
     position: absolute;
     top: 23px;
     right: 14px;
-    stroke: #fff;
+    stroke: var(--title-main);
   }
-}
-
-.mobile-nav__btn.is-open:hover,
-.icon-close:focus {
-  stroke: var(--title-main);
 }
 
 .mobile-nav__btn .icon-close {
@@ -179,7 +171,7 @@ header {
 
 .mobile-nav__btn:hover,
 .mobile-nav__btn:focus {
-  stroke: var(--background-secondary);
+  stroke: var(--title-main);
 }
 
 .mobile-nav__btn.is-open .icon-menu {
@@ -213,7 +205,7 @@ header {
     display: block;
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     display: block;
     min-width: 159px;
   }
@@ -274,7 +266,7 @@ header {
   display: none;
   list-style: none;
 
-  @include mq(desc) {
+  @include mq(desk) {
     display: flex;
     align-items: center;
   }
@@ -285,17 +277,19 @@ header {
 }
 
 .site-nav__link {
-  color: var(--background-secondary);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.31;
+  @include fonts(16px, 700, 1.31, null);
   text-decoration: none;
+
+  padding: 20px 0;
+
+  color: var(--background-secondary);
   transition: color var(--transition);
 }
 
 .site-nav__link:hover,
 .site-nav__link:focus {
   color: var(--title-main);
+  cursor: pointer;
 }
 
 .site-nav__link--current {
@@ -314,15 +308,11 @@ header {
   position: absolute;
   top: 123px;
   left: 0;
-  height: 210px;
+  height: 170px;
   width: 250px;
   background-image: repeating-linear-gradient(
     0deg,
-    #e18298 0 1px,
-    transparent 1px 42px
+    #e18298 0 0px,
+    #0000 1px 43px
   );
-
-  @include mq(tab-only) {
-    width: 254px;
-  }
 }

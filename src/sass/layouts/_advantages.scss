@@ -10,7 +10,7 @@
     --card-item: 3;
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     gap: 190px;
   }
 }
@@ -28,7 +28,7 @@
   @include mq(tab) {
     margin-bottom: 36px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     margin-bottom: 40px;
   }
 }
@@ -66,7 +66,7 @@
     margin-bottom: 13px;
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     @include fonts(58px, 400, 1.13, 0.04em);
     margin-bottom: 16px;
     min-height: 65px;
@@ -83,7 +83,7 @@
     width: auto;
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     @include fonts(16px, 700, 1.7, null);
   }
 }

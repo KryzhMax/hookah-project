@@ -14,7 +14,7 @@
     margin-top: 158px;
     gap: 16px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     flex-wrap: nowrap;
     justify-content: center;
     margin-top: 200px;
@@ -29,7 +29,7 @@
   align-items: flex-start;
   border-radius: 24px;
   padding-bottom: 40px;
-  @include mq(desc) {
+  @include mq(desk) {
     padding-bottom: 60px;
   }
 
@@ -74,7 +74,7 @@
       screen and (min-width: 768px) and (min-resolution: 2dppx) {
       background-image: url(../images/products/tab-milkshake-448@2x.webp);
     }
-    @include mq(desc) {
+    @include mq(desk) {
       width: 368px;
       height: 394px;
       background-image: url(../images/products/desk-milkshake-368.webp);
@@ -121,7 +121,7 @@
       screen and (min-width: 768px) and (min-resolution: 2dppx) {
       background-image: url(../images/products/tab-coffee-448@2x.webp);
     }
-    @include mq(desc) {
+    @include mq(desk) {
       width: 368px;
       height: 394px;
       background-image: url(../images/products/desk-coffee-368.webp);
@@ -168,7 +168,7 @@
       screen and (min-width: 768px) and (min-resolution: 2dppx) {
       background-image: url(../images/products/tab-choco-448@2x.webp);
     }
-    @include mq(desc) {
+    @include mq(desk) {
       width: 368px;
       height: 394px;
       background-image: url(../images/products/desk-choco-368.webp);
@@ -196,7 +196,7 @@
   @include mq(tab) {
     margin-top: 32px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     @include fonts(30px, 400, 1.1333, 0.04em);
   }
 }
@@ -225,7 +225,7 @@
     padding-left: 32px;
     padding-right: 32px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     @include fonts(16px, 700, 1.76, 0.04em);
   }
 

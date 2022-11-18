@@ -5,7 +5,7 @@
 .footer__wrapper {
   padding-top: 40px;
   padding-bottom: 40px;
-  @include mq(desc) {
+  @include mq(desk) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -42,7 +42,7 @@
     margin-bottom: 12px;
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     @include fonts($fs: 30px, $fw: 400, $lh: 1.13, $ls: 0.04);
   }
 }
@@ -55,7 +55,7 @@
     @include fonts($fs: 48px, $fw: 400, $lh: 1.14, $ls: 0.06);
   }
 
-  @include mq(desc) {
+  @include mq(desk) {
     @include fonts($fs: 58px, $fw: 400, $lh: 1.13, $ls: 0.06);
   }
 }

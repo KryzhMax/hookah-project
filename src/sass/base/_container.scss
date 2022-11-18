@@ -6,10 +6,13 @@
   @include mq(mob) {
     width: 320px;
   }
+  @include mq(fab) {
+    width: 478px;
+  }
   @include mq(tab) {
     width: 768px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     width: 1200px;
   }
 }

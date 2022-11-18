@@ -1,29 +1,33 @@
 <header>
   <div class="header__container container">
     <nav class="main-nav">
-      <a class="logo" href="./index.html"
-        ><svg class="logo-img" width="199" height="50" aria-label="Logo">
-          <use href="./images/sprite.svg#icon-logo"></use>
-        </svg>
+      <a class="logo" href="./index.html">
+        <img
+          class="logo-img"
+          src="./images/hookah/toindex.webp"
+          alt="logo"
+          width="120"
+          aria-label="Logo"
+        />
       </a>
 
       <ul class="site-nav list">
-        <li class="site-nav__item">
+        <!-- <li class="site-nav__item">
           <a class="site-nav__link site-nav__link--current" href="./index.html"
-            >Home</a
+            >Головна</a
           >
+        </li> -->
+        <li class="site-nav__item">
+          <a class="site-nav__link" data-about>Про нас</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="#advantages">About us</a>
+          <a class="site-nav__link" data-info>Інформація</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="#about">How it’s made?</a>
+          <a class="site-nav__link" data-products>Послуги</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="#products">Our products</a>
-        </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="#contacts">Contact</a>
+          <a class="site-nav__link" data-contacts>Контакти</a>
         </li>
       </ul>
       <div class="header__buttons">
@@ -45,7 +49,7 @@
         </button>
 
         <button class="header__btn" data-modal-open>
-          Buy now
+          Замовити!
           <svg class="btn-icon" width="6" height="10">
             <use href="./images/sprite.svg#icon-further"></use>
           </svg>
@@ -54,38 +58,38 @@
 
       <div class="site-nav--mobile" data-menu>
         <button class="header__btn--mobile" type="button" data-modal-open-mob>
-          Buy now
+          Замовити!
           <svg class="btn-icon" width="6" height="10">
             <use href="./images/sprite.svg#icon-further"></use>
           </svg>
         </button>
         <div class="gradient"></div>
         <ul class="site-nav__list--mobile">
-          <li class="site-nav__item--mobile">
+          <!-- <li class="site-nav__item--mobile">
             <a
               class="site-nav__link site-nav__link--mobile site-nav__link--current"
               href="./index.html"
-              >Home</a
+              >Головна</a
+            >
+          </li> -->
+          <li class="site-nav__item--mobile">
+            <a class="site-nav__link site-nav__link--mobile" data-about
+              >Про нас</a
             >
           </li>
           <li class="site-nav__item--mobile">
-            <a class="site-nav__link site-nav__link--mobile" href="#advantages"
-              >About us</a
+            <a class="site-nav__link site-nav__link--mobile" data-info
+              >Інформація</a
             >
           </li>
           <li class="site-nav__item--mobile">
-            <a class="site-nav__link site-nav__link--mobile" href="#about"
-              >How it’s made?</a
+            <a class="site-nav__link site-nav__link--mobile" data-products
+              >Послуги</a
             >
           </li>
           <li class="site-nav__item--mobile">
-            <a class="site-nav__link site-nav__link--mobile" href="#products"
-              >Our products</a
-            >
-          </li>
-          <li class="site-nav__item--mobile">
-            <a class="site-nav__link site-nav__link--mobile" href="#contacts"
-              >Contact</a
+            <a class="site-nav__link site-nav__link--mobile" data-contacts
+              >Контакти</a
             >
           </li>
         </ul>

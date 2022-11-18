@@ -1,27 +1,30 @@
 .contacts {
-  background-image: linear-gradient(to top, #fff5f6 78%, #ffffff 22%);
+  background-image: linear-gradient(#dc24244f, #4a569d62),
+    url(../images/hookah/Image-by-rawpixel.com-on-Freepik.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  @include mq(tab-only) {
-    background-image: linear-gradient(to top, #fff5f6 55%, #ffffff 45%);
-  }
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  @include mq(noDesc) {
-    padding: 0;
+    margin-top: 40px;
   }
 }
 
 .card__item {
-  @include mq(mob-only) {
-    --card-item: 1;
-    --card-gap: 20px;
-  }
-  padding: 40px 32px;
+  backdrop-filter: blur(10px);
 
-  background: #ffffff;
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  padding: 40px 32px;
   border-radius: 24px;
 
-  @include mq(desc) {
+  background-color: #ffffff0f;
+  box-shadow: var(--box-shadow);
+
+  @include mq(desk) {
     padding: 40px;
   }
 }
@@ -50,20 +53,23 @@
   background-color: var(--green-color);
 }
 
-.card__content {
-  @include fonts($fs: 12px, $fw: 500, $lh: 1.5, $ls: 0.04em);
+.card__content,
+.schedule__item,
+.card__contact {
+  @include fonts(12px, 500, 1.5, 0.04em);
+
   @include mq(tab) {
-    @include fonts($fs: 14px, $fw: null, $lh: null, $ls: null);
+    font-size: 14px;
   }
-  @include mq(desc) {
-    @include fonts($fs: 16px, $fw: null, $lh: null, $ls: null);
+  @include mq(desk) {
+    font-size: 16px;
   }
 }
 
 .card__content,
 .schedule-list {
   padding-bottom: 24px;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 24px;
   @include mq(tab) {
     margin-bottom: 32px;
@@ -71,28 +77,14 @@
   }
 }
 
-.card__city {
-  color: #000000;
-  margin-bottom: 8px;
-}
-
-.schedule__item {
-  @include fonts($fs: 12px, $fw: 500, $lh: 1.84, $ls: 0.04em);
-
-  @include mq(tab) {
-    @include fonts($fs: 14px, $fw: null, $lh: null, $ls: null);
-  }
-  @include mq(desc) {
-    @include fonts($fs: 16px, $fw: null, $lh: null, $ls: null);
-  }
-}
-
 .schedule__item + .schedule__item {
   margin-top: 10px;
 }
 
-.schedule--day {
-  color: #000000;
+.schedule--day,
+.content__text,
+.card__city {
+  color: #e5e5e5;
 }
 
 .schedule--time {
@@ -100,34 +92,32 @@
 }
 
 .card__contact {
-  @include fonts($fs: 12px, $fw: 500, $lh: 1.5, $ls: 0.04em);
-  @include mq(tab) {
-    @include fonts($fs: 14px, $fw: null, $lh: null, $ls: null);
-  }
-  @include mq(desc) {
-    @include fonts($fs: 16px, $fw: null, $lh: null, $ls: null);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 180px;
 }
 
 .card__link {
-  display: block;
-
+  text-align: center;
   text-decoration: none;
+
+  padding: 10px;
+  min-width: 220px;
+
   color: var(--grey-text);
   transition: color var(--transition);
-  &:hover,
-  &:focus {
-    color: var(--title-main);
-  }
 }
 
 .connect {
   margin-top: 32px;
+  text-align: center;
+
   @include mq(tab) {
     margin-top: 60px;
-  }
-  text-align: center;
-  @include mq(tab) {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,24 +134,24 @@
 }
 
 .connect__button {
-  @include fonts($fs: 16px, $fw: 700, $lh: 1.31, $ls: 0.02em);
+  @include fonts(16px, 700, 1.31, 0.02em);
   cursor: pointer;
+
+  padding: 10px;
+  min-width: 192px;
+  min-height: 44px;
+
   color: var(--background-secondary);
+  background-color: var(--title-main);
   transition: color var(--transition), background-color var(--transition);
+
+  border: 1px solid transparent;
+  border-radius: 22px;
+
   &:hover,
   &:focus {
     background-color: #ecebeb;
     color: var(--title-main);
-  }
-  @include mq(mob-only) {
-    width: 162px;
-    height: 44px;
-  }
-  background-color: var(--title-main);
-  border-radius: 22px;
-  border: 1px solid transparent;
-  @include mq(tab) {
-    padding: 10px 35px;
   }
 }
 
@@ -169,6 +159,7 @@
   color: var(--title-main);
   background-color: var(--background-secondary);
   transition: color var(--transition), background-color var(--transition);
+
   &:hover,
   &:focus {
     background-color: #ecebeb;
@@ -259,34 +250,39 @@
 .icon-more {
   fill: currentColor;
   stroke: currentColor;
+
   margin-left: 8px;
+
   @include mq(tab) {
     margin-left: 14px;
   }
 }
 
 .form {
+  font-family: var(--text-ff);
+
   width: 100%;
   height: 100%;
   padding: 40px;
-  font-family: var(--text-ff);
 }
 
 .form__title {
-  margin-bottom: 12px;
-  display: block;
   font-family: var(--title-ff);
+
+  display: block;
+  text-align: center;
+
+  margin-bottom: 12px;
+
   color: var(--title-main);
+
   @media screen and (max-width: 321px) {
     @include fonts(14px, 700, 1.2, 0.03em);
   }
 
-  @include fonts(20px, 700, 1.5, 0.03em);
-
-  @include mq(desc) {
+  @include mq(desk) {
     @include fonts(20px, 700, 1.15, 0.03em);
   }
-  text-align: center;
 }
 
 .form__field {
@@ -299,14 +295,14 @@
 }
 
 .form__label {
-  margin-bottom: 4px;
-
   @include fonts(12px, 500, 1.5, 0.03em);
 
-  @include mq(desc) {
-    @include fonts(null, null, 1.14, null);
-  }
+  margin-bottom: 4px;
   color: var(--grey-text);
+
+  @include mq(desk) {
+    line-height: 1.14;
+  }
 }
 
 .form__wrap {
@@ -323,9 +319,7 @@
   border-radius: 10px;
 
   cursor: pointer;
-  transition: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus {
     outline: none;
@@ -339,17 +333,16 @@
 }
 
 .form__textarea {
+  @include fonts(14px, 400, 1.14, 0.01em);
+
   width: 100%;
   height: 120px;
   padding: 12px 15px;
 
-  @include fonts(14px, 400, 1.14, 0.01em);
   border: 1px solid rgba(0, 0, 0, 0.16);
   border-radius: 10px;
   resize: none;
-  transition: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 
   &:focus {
@@ -366,7 +359,8 @@
   display: inherit;
   margin-left: auto;
   margin-right: auto;
-  font-family: var(--text-ff);
+  font-family: var(--ukr-text);
+
   @media (max-width: 321px) {
     margin-top: 5px;
   }

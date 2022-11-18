@@ -4,7 +4,7 @@
   // justify-content: center;
   gap: var(--card-gap);
 
-  @include mq(desc) {
+  @include mq(desk) {
     flex-wrap: nowrap;
   }
 }

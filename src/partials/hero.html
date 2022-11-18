@@ -1,65 +1,43 @@
 <section class="hero">
+  <!-- <div class="layers"> -->
   <div class="container hero-content">
     <div class="hero__container">
       <div class="hero_container_info">
         <ul class="hero__list_number">
           <li class="hero__item_number">
-            <div class="hero__round_cafes"></div>
-            <p class="hero__text_number">16</p>
-            <p class="hero__text_cafes">cafes</p>
+            <p class="hero__text_number">800+</p>
+            <p class="hero__text_cafes">Задоволених клієнтів</p>
           </li>
           <li class="hero__item_number">
-            <div class="hero__round_food"></div>
-            <p class="hero__text_number">23</p>
-            <p class="hero__text_food">food trucks</p>
+            <p class="hero__text_number">100+</p>
+            <p class="hero__text_food">Виїздів</p>
           </li>
         </ul>
       </div>
       <div class="hero__container_title">
         <h1 class="hero__title">
-          ice cream made with <span class="hero__title_red">passion</span>
+          У нас правильний кальян <br /><span class="hero__title_red"
+            >passion</span
+          >
         </h1>
         <ul class="hero__list_button">
           <li class="hero__item_button">
-            <a class="link hero__button_products" href="#products">Products</a>
+            <a class="link hero__button_products" data-products>Послуги</a>
           </li>
           <li class="hero__item_button">
-            <a class="link link hero__button_made" href="#about"
-              >How it’s made?</a
-            >
+            <a class="link link hero__button_made" data-info>Інформація</a>
           </li>
         </ul>
       </div>
     </div>
-    <picture>
-      <source
-        srcset="
-          ./images/hero/mob/icecream.webp    1x,
-          ./images/hero/mob/icecream@2x.webp 2x
-        "
-        media="(max-width: 767px)"
-        type="image/webp"
-      />
-      <source
-        srcset="
-          ./images/hero/tablet/icecream.webp    1x,
-          ./images/hero/tablet/icecream@2x.webp 2x
-        "
-        media="(min-width: 768px) and (max-width: 1200px)"
-        type="image/webp"
-      />
-      <source
-        srcset="
-          ./images/hero/desctop/icecream.webp    1x,
-          ./images/hero/desctop/icecream@2x.webp 2x
-        "
-        media="(min-width: 1200px)"
-        type="image/webp"
-      />
-      <img class="hero__img" src="./images/hero/mob/icecream.webp" alt="ice" />
-    </picture>
+    <!-- <img
+      class="hero__img"
+      src="./images/hookah/hookah-no-color.png"
+      alt="hookah"
+      width="200"
+    /> -->
 
-    <div class="hero_container_milk">
+    <!-- <div class="hero_container_milk">
       <picture>
         <source
           srcset="
@@ -94,29 +72,27 @@
           <img src="./images/arrow-right.png" alt="..." />
         </button>
       </div>
-    </div>
-    <picture>
-      <source
-        srcset="
-          ./images/hero/tablet/tasty.webp    1x,
-          ./images/hero/tablet/tasty@2x.webp 2x
-        "
-        media="(min-width: 768px) and (max-width: 1200px)"
-        type="image/webp"
-      />
-      <source
-        srcset="
-          ./images/hero/desctop/tasty.webp    1x,
-          ./images/hero/desctop/tasty@2x.webp 2x
-        "
-        media="(min-width: 1200px)"
-        type="image/webp"
-      />
-      <img
-        class="hero__img_tasty"
-        src="./images/hero/tablet/tasty.webp"
-        alt="tasty"
-      />
-    </picture>
+    </div> -->
+    <p class="hero-scroll">Scroll down</p>
   </div>
+  <div
+    class="layer layers__base"
+    style="
+      background-image: linear-gradient(to bottom, #dc24244f, #4a569d62),
+        url(./images/hookah/bg.webp);
+    "
+  ></div>
+  <div
+    class="layer layers__front"
+    style="
+      background-image: linear-gradient(to bottom, #dc24244f, #4a569d62),
+        url(./images/hookah/fg.webp);
+    "
+  ></div>
+  <!-- <div class="svg">
+    <svg class="sky-icon">
+      <use href="./images/sprite.svg#icon-sky"></use>
+    </svg>
+  </div> -->
+  <!-- </div> -->
 </section>

@@ -1,18 +1,27 @@
 :root {
-  --background-accent: #ffb8ca;
-  --background-main: #fff5f6;
+  --background-accent: #5d0219;
+  --background-main: #7d001f;
   --background-secondary: #ffffff;
   --title-main: #d41443;
   --title-secondary: #ffa5ba;
-  --coffee-color: #f0d1a5;
-  --green-color: #c2e297;
+  // --coffee-color: #f0d1a5;
+  // --green-color: #c2e297;
   --review-color: #fafafa;
-  --grey-text: #907e82;
-  --icon-color: #fea5bb;
-  --background-mobile: #e17992;
+  --white-text: #fff;
+  // --icon-color: #fea5bb;
+  --background-mobile: #7f243b;
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --card-item: 3;
   --card-gap: 32px;
   --title-ff: 'Titan One';
   --text-ff: 'DM Sans', sans-serif;
+  --ukr-text: 'Philosopher', sans-serif;
+  --index: calc(1vw + 1vh);
+  --scrollTop: ;
+  --transitionParallax: transform 0.75s cubic-bezier(0.25, 0.5, 0, 1);
+  --box-shadow: 0 8px 30px #ff98001f;
+}
+
+#smooth-content {
+  will-change: transform;
 }

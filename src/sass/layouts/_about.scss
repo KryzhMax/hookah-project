@@ -1,32 +1,35 @@
 .about {
-  background-color: var(--background-main);
-  @include mq(desc) {
-    background-image: url(../images/about/desk-milk-left.png),
-      url(../images/about/desk-milk-right.png);
+  @include mq(mob) {
+    background-image: linear-gradient(#dc24244f, #4a569d62),
+      url(../images/hookah/bowl.webp);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: left 0 top 80px, right 0 top 200px;
-    background-size: 250px;
-    @include mq(retina) {
-      background-image: url(../images/about/desk-milk-left@2x.png),
-        url(../images/about/desk-milk-right@2x.png);
-      background-repeat: no-repeat;
-      background-position: left 0 top 236px, right 50 top 236px;
-      background-size: 250px;
-    }
+
+    // background-image: url(../images/about/mob-milk-left.png),
+    // url(../images/about/mob-milk-right.png);
+    // background-size: 88px;
+    // background-position: left 0 bottom 73px, right 0 bottom 200px;
+    // bottom: 175px;
+    // @include mq(retina) {
+    //   background-image: url(../images/about/mob-milk-left@2x.png),
+    //     url(../images/about/mob-milk-right@2x.png);
+    //   background-size: 88px;
+    // }
   }
-  @include mq(mob-only) {
-    bottom: 175px;
-    background-image: url(../images/about/mob-milk-left.png),
-      url(../images/about/mob-milk-right.png);
-    background-repeat: no-repeat;
-    background-size: 88px;
-    background-position: left 0 bottom 73px, right 0 bottom 200px;
-    @include mq(retina) {
-      background-image: url(../images/about/mob-milk-left@2x.png),
-        url(../images/about/mob-milk-right@2x.png);
-      background-size: 88px;
-    }
-  }
+  // @include mq(desk) {
+  //   background-image: url(../images/about/desk-milk-left.png),
+  //     url(../images/about/desk-milk-right.png);
+  //   background-repeat: no-repeat;
+  //   background-position: left 0 top 80px, right 0 top 200px;
+  //   background-size: 250px;
+  //   @include mq(retina) {
+  //     background-image: url(../images/about/desk-milk-left@2x.png),
+  //       url(../images/about/desk-milk-right@2x.png);
+  //     background-repeat: no-repeat;
+  //     background-position: left 0 top 236px, right 50 top 236px;
+  //     background-size: 250px;
+  //   }
+  // }
 }
 
 .about.container {
@@ -36,7 +39,7 @@
   @include mq(tab) {
     padding: 0 33px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     padding: 0 16px;
   }
 }
@@ -46,20 +49,23 @@
   @include mq(tab) {
     margin-bottom: 40px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     margin-bottom: 60px;
   }
 }
 
 .content {
-  font-weight: 500;
-  @include fonts(12px, null, 1.62, null);
+  display: flex;
+  flex-direction: column;
 
-  @include mq(tab) {
-    @include fonts(14px, null, 1.76, 0.04em);
+  @include fonts(14px, 500, 1.62, null);
+
+  @include mq(fab) {
+    @include fonts(null, null, 1.76, 0.04em);
+    margin-left: auto;
   }
-  @include mq(desc) {
-    @include fonts(14px, null, 1.94, 0.04em);
+  @include mq(desk) {
+    @include fonts(null, null, 1.94, null);
   }
 }
 
@@ -67,12 +73,15 @@
   @include mq(tab) {
     display: flex;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     align-items: center;
   }
 }
 
 .content__button {
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--background-secondary);
   padding: 0;
 
@@ -93,15 +102,11 @@
   line-height: 1.28;
   transition: color var(--transition), background-color var(--transition);
 
-  @include mq(mob) {
-    margin-top: 20px;
-  }
-  @include mq(tab-only) {
+  @include mq(tab) {
     display: block;
   }
 
-  @include mq(desc) {
-    display: block;
+  @include mq(desk) {
     min-width: 176px;
   }
   &:hover,
@@ -110,43 +115,25 @@
   }
 }
 
-.about_imagecowmilk {
-  max-width: 280px;
-  @include mq(tab) {
-    max-width: 336px;
-  }
-  @include mq(desc) {
-    max-width: 501px;
-  }
-}
-
-.text-black {
-  color: #000;
-}
-
 .content__wrap {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  max-width: 220px;
-  @include mq(tab) {
+  gap: 20px;
+  padding: 10px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  text-align: center;
+
+  max-width: 250px;
+  border-radius: 10px;
+
+  background-color: #64626275;
+
+  @include mq(fab) {
     max-width: 335px;
     margin-bottom: 40px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     max-width: 463px;
-  }
-}
-
-.cowmilk {
-  display: block;
-  @include mq(mob-only) {
-    margin-bottom: 40px;
-  }
-  @include mq(tab) {
-    margin-right: 32px;
-  }
-  @include mq(desc) {
-    margin-right: 99px;
   }
 }

@@ -1896,7 +1896,7 @@ header {
   transition: color var(--transition);
 }
 .card__link:hover, .card__link:focus {
-  color: var(--title-main);
+  color: #fff;
 }
 
 .connect {

@@ -17,7 +17,7 @@
       padding: 20px 6px 36px;
       margin-top: 40px;
     }
-    @include mq(desc) {
+    @include mq(desk) {
       width: 968px;
       padding: 32px 73px;
     }
@@ -51,7 +51,7 @@
         left: 0;
         top: 0;
       }
-      @include mq(desc) {
+      @include mq(desk) {
         top: 15px;
         left: 70px;
       }
@@ -59,7 +59,7 @@
     @include mq(tab) {
       width: 514px;
     }
-    @include mq(desc) {
+    @include mq(desk) {
       width: 750px;
     }
   }
@@ -90,7 +90,7 @@
     width: 620px;
     margin-bottom: 60px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     width: 968px;
     margin-bottom: 50px;
   }
@@ -129,7 +129,7 @@
   @include mq(mob) {
     padding-top: 120px;
   }
-  @include mq(desc) {
+  @include mq(desk) {
     padding-top: 150px;
   }
 }
@@ -141,7 +141,7 @@
     left: 140px;
     transform: translate(-50%, -50%);
   }
-  @include mq(desc) {
+  @include mq(desk) {
     position: absolute;
     top: 35%;
     left: 50%;
