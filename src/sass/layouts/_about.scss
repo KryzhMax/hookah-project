@@ -58,14 +58,14 @@
   display: flex;
   flex-direction: column;
 
-  @include fonts(14px, 500, 1.62, null);
+  @include fonts(14px, 400, 1.62, null);
 
   @include mq(fab) {
-    @include fonts(null, null, 1.76, 0.04em);
+    @include fonts(16px, 700, 1.76, 0.04em);
     margin-left: auto;
   }
   @include mq(desk) {
-    @include fonts(null, null, 1.94, null);
+    line-height: 1.94;
   }
 }
 

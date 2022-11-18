@@ -16,7 +16,6 @@ const products = document.querySelectorAll('[data-products]');
 const info = document.querySelectorAll('[data-info]');
 const aboutUs = document.querySelectorAll('[data-about]');
 const contacts = document.querySelectorAll('[data-contacts]');
-// console.log(contacts);
 
 function buttonListeners(elem, name) {
   console.log(name);
