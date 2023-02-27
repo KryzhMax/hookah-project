@@ -220,8 +220,8 @@
 
 .button__close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 12px;
+  right: 12px;
   padding: 0;
 
   width: 30px;
@@ -236,8 +236,8 @@
 }
 
 .button__icon {
-  width: 18px;
-  height: 18px;
+  // width: 32px;
+  // height: 32px;
   fill: var(--title-main);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -378,4 +378,49 @@
   left: 15px;
   transform: translateY(-50%);
   transition: fill var(--transition);
+}
+
+.scroll-up {
+  position: absolute;
+  font-weight: bold;
+  bottom: 115px;
+  right: -7px;
+  border: 0;
+  background-color: transparent;
+  z-index: 4;
+  cursor: pointer;
+
+  @include mq(tab) {
+    bottom: 115px;
+    right: 15px;
+  }
+
+  @include mq(desk) {
+    bottom: 115px;
+    right: 50px;
+  }
+
+  &:hover .scroll-up__icon {
+    fill: var(--title-main);
+    scale: 1.4;
+  }
+}
+
+.scroll-up__icon {
+  fill: #fd5103;
+  width: 20px;
+  height: 30px;
+  border-radius: 10px;
+
+  @include mq(tab) {
+    width: 35px;
+    height: 35px;
+  }
+
+  @include mq(desk) {
+    height: 50px;
+    width: 50px;
+  }
+
+  transition: background-color, scale 250ms ease-in-out, fill 250ms ease-in-out;
 }
